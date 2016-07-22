@@ -38,9 +38,18 @@
           alert("Please resolve the captcha and submit!");
           return false;
         } else {
-          //window.location.href = location.href.substr(0, location.href.lastIndexOf("/") + 1) + 'getcontacts';
-          //alert("Captcha Accepted!");
-          return true;
+          var theUrl = "http://mc0qzm9c.ww930.my-it-solutions.net:9000/verifycaptcha?response="+captaRes;
+          var xmlHttp = new XMLHttpRequest();
+          xmlHttp.open( "GET", theUrl, false );
+          xmlHttp.send( null );
+          var resp = JSON.parse(xmlHttp.responseText);
+          if (resp.success) {
+            //alert("Captcha Accepted! - " + resp.success);
+            return true;
+          } else {
+            alert("Incorrect captcha, Please resolve the captcha correctly and submit!");
+            return false;
+          }
         }
       }
     </script>
