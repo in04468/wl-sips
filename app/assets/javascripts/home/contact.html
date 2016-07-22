@@ -36,7 +36,7 @@
           alert("Please resolve the captcha and submit!");
           return false;
         } else {
-          var theUrl = "http://mc0qzm9c.ww930.my-it-solutions.net:9000/verifycaptcha?response="+captaRes;
+          var theUrl = location.href.substr(0, location.href.indexOf("/")) + "verifycaptcha?response="+captaRes;
           var xmlHttp = new XMLHttpRequest();
           xmlHttp.open( "GET", theUrl, false );
           xmlHttp.send( null );
