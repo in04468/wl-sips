@@ -16,6 +16,8 @@ libraryDependencies ++= Seq(
   filters,
   cache,
   ws,
+  "org.scalatestplus.play" %% "scalatestplus-play" % "1.5.0" % "test",
+  "org.mockito" % "mockito-core" % "1.10.19",
   // WebJars (i.e. client-side) dependencies
   "org.webjars" % "requirejs" % "2.1.14-1",
   "org.webjars" % "underscorejs" % "1.6.0-3",
