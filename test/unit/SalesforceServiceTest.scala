@@ -1,6 +1,8 @@
+package unit
+
 import models.{Contact, SalesforceException}
-import org.mockito.Mockito._
 import org.mockito.Matchers.anyString
+import org.mockito.Mockito._
 import play.api.libs.json.JsArray
 import salesforce.{SalesforceDao, SalesforceService}
 
